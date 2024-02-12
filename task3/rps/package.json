@@ -1,0 +1,19 @@
+{
+  "name": "rps",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "prompt-sync": "^4.2.0",
+    "randomnumbergenerator-js": "^1.0.1",
+    "table": "^6.8.1"
+  }
+}
