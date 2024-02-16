@@ -1,20 +1,19 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
 
 class Utils {
+  async doesDocumentExist(model, query) {
+    return query ? await model.findOne(query).then(result => !!result) : false;
+  }
 
-    async doesDocumentExist(model, query) {
-        return query
-            ? await model.findOne(query).then((result) => !!result)
-            : false
-    }
-
-    generateJWT = (email) => {
-        return jwt.sign({
-                email,
-            },
-            `${process.env.JWT_KEY}`,
-            {expiresIn: '12h'})
-    }
+  generateJWT = email => {
+    return jwt.sign(
+      {
+        email,
+      },
+      `${process.env.JWT_KEY}`,
+      { expiresIn: '12h' }
+    );
+  };
 }
 
-export default new Utils()
+export default new Utils();

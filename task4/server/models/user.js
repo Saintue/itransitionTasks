@@ -6,7 +6,7 @@ const User = new mongoose.Schema({
     password: {type: String, required: true},
     lastLogin: {type:String, default:"none"},
     regTime: {type:String, default: "none"},
-    status: {type: Boolean, default:true},
+    status: {type: String, default:"true"},
 })
 
 export default mongoose.model("User", User)
